@@ -3,7 +3,7 @@ var HEIGHT = 480;
 
 A = {};
 
-soundManager.url = "/swf/";
+soundManager.url = "swf/";
 
 // the music
 soundManager.onready(function() {
