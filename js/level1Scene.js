@@ -128,10 +128,8 @@ Crafty.scene("level1Scene", function() {
     // the enemy spawner
     Crafty.e("Spawner")
         .attr({_nextSpawnTick: 100, _interval: 150, _speed: 1500})
-//        .attr({_nextSpawnTick: 100, _interval: Crafty.math.randomInt(100, 200), _speed: 1500})
         .bind("RestartGame", function() {
             this._speed = 2000;
-//            this._interval = Crafty.math.randomInt(100, 200);
             this._interval = 150;
             this._nextSpawnTick = 100;
         })
@@ -175,8 +173,6 @@ Crafty.scene("level1Scene", function() {
                 this._interval = Math.round(this._interval * 0.99);
                 this._nextSpawnTick = A.tick + this._interval;
                 this._speed = Math.round(this._speed * 0.992);
-
-//                    console.log("A.tick: " + A.tick + " newspeed: " + this._speed + " newinterval: " + this._interval + " nextSpawnTick: " + this._nextSpawnTick);
 
             }
         });
