@@ -306,7 +306,7 @@ Crafty.scene("level1Scene", function() {
 
                 if (e[0].obj.has("enemy")) {
 
-                    A.explode.play();
+                    A.explode.play({volume: 50});
 
                     Crafty.trigger("GotOne", e[0].obj); // let enemy know he ded
 
