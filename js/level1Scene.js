@@ -72,9 +72,6 @@ Crafty.scene("level1Scene", function() {
     // the ui
     Crafty.e("Keyboard")
         .bind("KeyDown", function(e) {
-            if (this.isDown("UP_ARROW")) {
-                A.cheat = true;
-            }
             if (this.isDown(32)) {
                 Crafty.trigger("Release");
             }
@@ -186,7 +183,6 @@ Crafty.scene("level1Scene", function() {
             this._health = 10;
         })
         .onHit("enemy", function(ent) {
-            if (A.cheat) return;
             if (ent[0].obj._dead) return;
 
             A.hit.play({volume: 50});
