@@ -31,13 +31,11 @@ soundManager.onready(function() {
     // ...play music track
     A.track1.play({volume: 20});
 
-});
-
-window.onload = function() {
     // disable scrolling
     document.onkeydown=function(){return event.keyCode!=38 && event.keyCode!=40 && event.keyCode!=32};
 
     Crafty.init(WIDTH, HEIGHT);
     Crafty.canvas.init();
     Crafty.scene("level1Scene");
-};
+
+});
