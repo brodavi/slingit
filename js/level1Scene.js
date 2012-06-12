@@ -189,7 +189,7 @@ Crafty.scene("level1Scene", function() {
             if (A.cheat) return;
             if (ent[0].obj._dead) return;
 
-            A.hit.play();
+            A.hit.play({volume: 50});
             this._health -= 1;
             Crafty.trigger("GotHit", this._health);
             Crafty.trigger("HitBy", ent[0].obj);
